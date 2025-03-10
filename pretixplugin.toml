@@ -1,0 +1,5 @@
+[plugin]
+package = "pretix-seatingplan"
+modules = [ "pretix_seatingplan" ]
+marketplace_name = "seatingplan"
+

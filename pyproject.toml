@@ -1,0 +1,42 @@
+[project]
+name = "pretix-seatingplan"
+dynamic = ["version"]
+description = "Allow users to choose a ticket on a plan"
+readme = "README.rst"
+license = {text = "Apache"}
+keywords = ["pretix"]
+authors = [
+    {name = "Paul Tissot-Daguette", email = "moi@paultissot.ch"},
+]
+maintainers = [
+    {name = "Paul Tissot-Daguette", email = "moi@paultissot.ch"},
+]
+
+dependencies = [
+]
+
+[project.entry-points."pretix.plugin"]
+pretix_seatingplan = "pretix_seatingplan:PretixPluginMeta"
+
+[project.entry-points."distutils.commands"]
+build = "pretix_plugin_build.build:CustomBuild"
+
+[build-system]
+requires = [
+    "setuptools",
+    "pretix-plugin-build",
+]
+
+[project.urls]
+homepage = "GitHub repository URL"
+repository = "GitHub repository URL"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "pretix_seatingplan.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["pretix*"]
+namespaces = false
