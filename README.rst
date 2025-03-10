@@ -42,9 +42,6 @@ To automatically check for these issues before you commit, you can run ``.instal
 License
 -------
 
-
-Copyright 2025 Paul Tissot-Daguette
-
 Released under the terms of the Apache License 2.0
 
 
